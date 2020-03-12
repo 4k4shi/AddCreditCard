@@ -34,6 +34,7 @@ let preencherTUDO = function(e){
 		}
 		if(verificar == 1){
 			alert("Adicionamento feito com sucesso!!!");
+			e.cancelable
 			if(e.cancelable){
 				let final,nome,dia,mes;
 
@@ -41,8 +42,12 @@ let preencherTUDO = function(e){
 				nome = document.createTextNode(todosCampos[5].value);
 				dia = document.createTextNode(todosCampos[6].value);
 				mes = document.createTextNode(todosCampos[7].value);
-				e.preventDefault();
 
+				console.log("Final: ",todosCampos[3].value);
+				console.log("Nome:",todosCampos[5].value);
+				console.log("Dia:",todosCampos[6].value);
+				console.log("Mes:",todosCampos[7].value);
+				e.preventDefault();
 			}
 		}else{
 			alert("Algum campo em branco")
